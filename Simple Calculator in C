@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int add(int num1,int num2);
+int sub(int num1,int num2);
+int mul(int num1,int num2);
+double div(int num1,int num2);
+
+int main()
+{
+    int num1,num2,option;
+
+    printf("Simple Calculator \n");
+     printf("Choose an option : \n");
+      printf("1.Add \n");
+       printf("2.Sub \n");
+        printf("3.Mul \n");
+        printf("4.Div \n");
+
+    scanf("%d",&option);
+  
+
+    printf("Enter Two Numbers : \n");
+    scanf("%d%d",&num1,&num2);
+
+    switch(option)
+    {
+    case 1:
+        printf("Sum = %d\n",add(num1,num2));
+        break;
+    case 2:
+        printf("Sub = %d\n",sub(num1,num2));
+        break;
+    case 3:
+        printf("Mul = %d\n",mul(num1,num2));
+        break;
+    case 4:
+        printf("Div = %.2lf\n",div(num1,num2));
+        break;
+
+    }
+    return 0;
+}
+int add(int num1,int num2)
+{
+return num1+num2;
+}
+int sub(int num1,int num2)
+{
+    return num1-num2;
+}
+int mul(int num1,int num2)
+{
+    return num1*num2;
+}
+double div(int num1,int num2)
+{
+    return num1/num2;
+}
